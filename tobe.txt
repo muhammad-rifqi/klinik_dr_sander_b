@@ -1,0 +1,189 @@
+GAMBAR 1 (High-Level MCU Flow)
+
+👉 Fokus: alur utama, tapi masih punya sub-proses di tiap blok
+
+1.1 – Manajemen Data Master (Import)
+
+Sub-proses:
+
+Import data perusahaan client
+Import data peserta MCU
+Sinkronisasi data dari sistem lain
+Penyimpanan ke database utama
+1.2 – Validasi & Mapping Data
+
+Sub-proses:
+
+Validasi format data (NIK, nama, dll)
+Mapping field (misalnya dari Excel ke DB)
+Cek duplikasi data peserta
+Penyesuaian data ke standar sistem
+1.3 – Monitoring & Pencarian Data
+
+Sub-proses:
+
+Searching peserta MCU
+Filter data (tanggal, perusahaan, status)
+Tracking status pemeriksaan
+Dashboard monitoring
+1.4 – Attendance / Check-in
+
+Sub-proses:
+
+Peserta datang & registrasi
+Verifikasi identitas
+Generate nomor antrian
+Update status ke “hadir”
+1.5 – Input Data Pemeriksaan
+
+Sub-proses:
+
+Input hasil pemeriksaan awal (tensi, berat, dll)
+Input dari perawat/dokter
+Penyimpanan hasil sementara
+Integrasi alat medis (jika ada)
+1.6 – Input Data Penunjang
+
+Sub-proses:
+
+Input radiologi (rontgen)
+Input lab manual
+Input hasil tambahan
+Upload file hasil (gambar, PDF)
+1.7 – Manajemen Hasil Lab & QC
+
+Sub-proses:
+
+Validasi hasil lab oleh analis
+Koreksi data jika ada kesalahan
+Approval hasil lab
+Kirim ke tahap QC
+1.8 – QC Hasil Lab
+
+Sub-proses:
+
+Quality control hasil
+Cross-check data
+Validasi akhir sebelum dokter
+Reject / approve hasil
+1.9 – Resume & QC Akhir MCU
+
+Sub-proses:
+
+Dokter membuat resume hasil MCU
+Penilaian kesehatan peserta
+QC akhir oleh dokter senior
+Finalisasi hasil
+1.10 – Print Hasil MCU
+
+Sub-proses:
+
+Generate laporan PDF
+Print hasil
+Export data
+Distribusi ke client
+
+
+
+
+
+
+
+
+GAMBAR 2 (Detail / Low-Level Flow)
+
+👉 Lebih granular, banyak tambahan proses kecil
+
+1.1 – Tagging MCU & Antrian
+
+Sub-proses:
+
+Registrasi peserta MCU
+Penentuan jenis paket MCU
+Generate antrian
+Assign ke poli / pemeriksaan
+1.2 – Validasi Data
+
+Sub-proses:
+
+Validasi input user
+Cek kelengkapan data
+Validasi ke sistem pusat
+Error handling data invalid
+1.3 – Entry Data & Anamnesa
+
+Sub-proses:
+
+Input riwayat kesehatan
+Input keluhan peserta
+Input data medis awal
+Simpan ke sistem
+1.4 – Submit Data
+
+Sub-proses:
+
+Submit data ke server
+Lock data agar tidak diubah
+Trigger ke proses berikutnya
+Logging aktivitas
+1.5 – Input Data Pemeriksaan (Detail)
+
+Sub-proses:
+
+Input per poli:
+Poli umum
+Radiologi
+Laboratorium
+Input otomatis dari alat (jika ada)
+Validasi input medis
+1.6 – Verifikasi & Penyesuaian Data
+
+Sub-proses:
+
+Verifikasi oleh admin/dokter
+Koreksi data
+Approval sementara
+Tracking perubahan
+1.7 – Resume Hasil & QC (Detail)
+
+Sub-proses:
+
+Penyusunan hasil akhir
+Analisis kondisi kesehatan
+QC berlapis
+Approval dokter
+1.8 – Finalisasi & Distribusi
+
+Sub-proses:
+
+Final check
+Generate report
+Kirim ke client
+Arsip data
+-----------------------------------------
+Kesimpulan 
+Gambar 2 menambahkan:
+---------------------------
+Pre-processing
+Tagging MCU
+Assign poli
+--------------------------------
+System control
+Submit
+Lock data
+Logging
+--------------------------
+Medical detail
+Anamnesa
+------------------------------
+Granular processing
+Per poli
+Validasi medis
+----------------------------
+Data governance
+Tracking perubahan
+Multi-level approval
+-----------------------------
+Final system layer
+Arsip
+Distribusi sistematis

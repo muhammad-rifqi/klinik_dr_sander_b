@@ -1,0 +1,48 @@
+1. Gambar Pertama (lebih sederhana / high-level)
+
+Karakteristik:
+
+Fokus ke alur besar sistem eMCU
+Aktor masih umum:
+IT
+Admin MCU
+Dokter
+Perawat
+Perusahaan client
+
+
+Proses yang ditampilkan hanya garis besar:
+Upload CSV peserta
+Input hasil pemeriksaan
+Export hasil MCU
+Tidak terlalu detail ke proses internal
+
+Intinya:
+👉 Ini adalah context diagram level tinggi (overview)
+👉 Dipakai untuk memahami siapa saja yang terlibat & aliran data utama
+
+
+2. Gambar Kedua (lebih detail / semi DFD level 1)
+
+Karakteristik:
+
+Sudah masuk ke alur proses lebih rinci
+Ada tambahan proses seperti:
+Registrasi peserta (QR Code)
+Validasi data
+Check-in
+Input hasil per bagian (perawat, radiografer, lab)
+Integrasi API (SATUSEHAT, dll)
+Approval hasil lab
+
+
+Aktor lebih spesifik:
+Radiografer
+LIS (Lab Information System)
+Analisis Lab
+Dokter Patologi Klinik
+Ada banyak sub-proses dan alur bolak-balik
+
+Intinya:
+👉 Ini bukan murni context diagram lagi
+👉 Lebih ke DFD Level 1 / Detail System Flow
