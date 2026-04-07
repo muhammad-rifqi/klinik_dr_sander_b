@@ -1,0 +1,583 @@
+{
+  "info": {
+    "_postman_id": "fd3ee511-fa7c-4282-9020-4a46723c4550",
+    "name": "eMCU",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52521814",
+    "_collection_link": "https://go.postman.co/collection/52521814-fd3ee511-fa7c-4282-9020-4a46723c4550?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Access Token",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"dayamedika2\",\r\n    \"password\": \"dayamedika_prod2\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api-webservice.teramobile.app/api/v1/login",
+          "protocol": "https",
+          "host": [
+            "api-webservice",
+            "teramobile",
+            "app"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API Get RM",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTMyY2NiMDYyZDU5YTFjNDUyMGQ4ZTY0MWE3OWFmZDYxMzljNGU5MmQzYjgyMDg2MWY1NWQ4ZmFkZTczYWY4MzdmYTAyNDE0ZDNkMTRiYzciLCJpYXQiOjE3NzE1MDY5NTQsIm5iZiI6MTc3MTUwNjk1NCwiZXhwIjoxODAzMDQyOTU0LCJzdWIiOiIxNCIsInNjb3BlcyI6W119.Srir1gL7UyfvdKIKpqbNpPCEKjbBFLPtv9deTTl-ZdxwTQs8s6tHpIpMSLgZ-388egGAOznqN8Xj3nqxp_pjKg",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"requestid\": \"get_rm\",\r\n    \"bcauth\": true,\r\n    \"method\": \"form-data\",\r\n    \"data\": {\r\n        \"search_name\": \"DYAH AYU PITALOKA\",\r\n        \"birth_date\": \"12-05-2000\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api-webservice.teramobile.app/api/v1/passing",
+          "protocol": "https",
+          "host": [
+            "api-webservice",
+            "teramobile",
+            "app"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "passing"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API Get MCU",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTMyY2NiMDYyZDU5YTFjNDUyMGQ4ZTY0MWE3OWFmZDYxMzljNGU5MmQzYjgyMDg2MWY1NWQ4ZmFkZTczYWY4MzdmYTAyNDE0ZDNkMTRiYzciLCJpYXQiOjE3NzE1MDY5NTQsIm5iZiI6MTc3MTUwNjk1NCwiZXhwIjoxODAzMDQyOTU0LCJzdWIiOiIxNCIsInNjb3BlcyI6W119.Srir1gL7UyfvdKIKpqbNpPCEKjbBFLPtv9deTTl-ZdxwTQs8s6tHpIpMSLgZ-388egGAOznqN8Xj3nqxp_pjKg",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"requestid\": \"get_mcu\",\r\n    \"bcauth\": true,\r\n    \"method\": \"form-data\",\r\n    \"data\": {\r\n        \"search_nik\": \"987198018781002\",\r\n        \"search_name\": \"TEST API PESERTA 01\",\r\n        \"tgl_lahir\": \"19-01-1996\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api-webservice.teramobile.app/api/v1/passing",
+          "protocol": "https",
+          "host": [
+            "api-webservice",
+            "teramobile",
+            "app"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "passing"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API Konfirmasi MCU",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNGFhNmYzOGE2MWIyZDNjOWJiZjM1MDIyMzg3MDgzZmUzYzM1OWJlZTljNTBkYzAxYzE0OGUxNzNlODJiZjZlOTMzZTc4NTRjYzRlZmY5ZjIiLCJpYXQiOjE3NzE1NTEwNjIsIm5iZiI6MTc3MTU1MTA2MiwiZXhwIjoxODAzMDg3MDYyLCJzdWIiOiIxNCIsInNjb3BlcyI6W119.YTF_C707yvVfqwfX1qyDCaFk8dFFJUFDN3VmRZLBwsQjEBBXth0gvCwvKYd9RpN3qmvmh2bNV5r_4Ytlmx1LLQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"requestid\": \"konfirmasi_mcu\",\r\n    \"bcauth\": true,\r\n    \"method\": \"form-data\",\r\n    \"data\": {\r\n        \"no_konfirmasi\": \"585454\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api-webservice.teramobile.app/api/v1/passing",
+          "protocol": "https",
+          "host": [
+            "api-webservice",
+            "teramobile",
+            "app"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "passing"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API Get Perusahaan",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNGFhNmYzOGE2MWIyZDNjOWJiZjM1MDIyMzg3MDgzZmUzYzM1OWJlZTljNTBkYzAxYzE0OGUxNzNlODJiZjZlOTMzZTc4NTRjYzRlZmY5ZjIiLCJpYXQiOjE3NzE1NTEwNjIsIm5iZiI6MTc3MTU1MTA2MiwiZXhwIjoxODAzMDg3MDYyLCJzdWIiOiIxNCIsInNjb3BlcyI6W119.YTF_C707yvVfqwfX1qyDCaFk8dFFJUFDN3VmRZLBwsQjEBBXth0gvCwvKYd9RpN3qmvmh2bNV5r_4Ytlmx1LLQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"requestid\": \"get_perusahaan\",\r\n    \"bcauth\": true,\r\n    \"method\": \"form-data\",\r\n    \"data\": {\r\n        //\"id_perusahaan\" :\"afgaga\",\r\n        \"nama_perusahaan\":\"PT PRATEST 2025\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api-webservice.teramobile.app/api/v1/passing",
+          "protocol": "https",
+          "host": [
+            "api-webservice",
+            "teramobile",
+            "app"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "passing"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API Get Paket",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNGFhNmYzOGE2MWIyZDNjOWJiZjM1MDIyMzg3MDgzZmUzYzM1OWJlZTljNTBkYzAxYzE0OGUxNzNlODJiZjZlOTMzZTc4NTRjYzRlZmY5ZjIiLCJpYXQiOjE3NzE1NTEwNjIsIm5iZiI6MTc3MTU1MTA2MiwiZXhwIjoxODAzMDg3MDYyLCJzdWIiOiIxNCIsInNjb3BlcyI6W119.YTF_C707yvVfqwfX1qyDCaFk8dFFJUFDN3VmRZLBwsQjEBBXth0gvCwvKYd9RpN3qmvmh2bNV5r_4Ytlmx1LLQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"requestid\": \"get_paket\",\r\n    \"bcauth\": true,\r\n    \"method\": \"form-data\",\r\n    \"data\": {\r\n        \"nama_paket\":\"MEDIKA - PAKET TEST - 2025\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api-webservice.teramobile.app/api/v1/passing",
+          "protocol": "https",
+          "host": [
+            "api-webservice",
+            "teramobile",
+            "app"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "passing"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API Get Dokter Koordinator",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNGFhNmYzOGE2MWIyZDNjOWJiZjM1MDIyMzg3MDgzZmUzYzM1OWJlZTljNTBkYzAxYzE0OGUxNzNlODJiZjZlOTMzZTc4NTRjYzRlZmY5ZjIiLCJpYXQiOjE3NzE1NTEwNjIsIm5iZiI6MTc3MTU1MTA2MiwiZXhwIjoxODAzMDg3MDYyLCJzdWIiOiIxNCIsInNjb3BlcyI6W119.YTF_C707yvVfqwfX1qyDCaFk8dFFJUFDN3VmRZLBwsQjEBBXth0gvCwvKYd9RpN3qmvmh2bNV5r_4Ytlmx1LLQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"requestid\": \"get_dokter_koordinator\",\r\n    \"bcauth\": true,\r\n    \"method\": \"form-data\",\r\n    \"data\": {\r\n        \"nama_dokter\":\"dr. FLYNDIE SIMON\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api-webservice.teramobile.app/api/v1/passing",
+          "protocol": "https",
+          "host": [
+            "api-webservice",
+            "teramobile",
+            "app"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "passing"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API Get Dokter Paket",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNGFhNmYzOGE2MWIyZDNjOWJiZjM1MDIyMzg3MDgzZmUzYzM1OWJlZTljNTBkYzAxYzE0OGUxNzNlODJiZjZlOTMzZTc4NTRjYzRlZmY5ZjIiLCJpYXQiOjE3NzE1NTEwNjIsIm5iZiI6MTc3MTU1MTA2MiwiZXhwIjoxODAzMDg3MDYyLCJzdWIiOiIxNCIsInNjb3BlcyI6W119.YTF_C707yvVfqwfX1qyDCaFk8dFFJUFDN3VmRZLBwsQjEBBXth0gvCwvKYd9RpN3qmvmh2bNV5r_4Ytlmx1LLQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"requestid\": \"get_dokter_paket\",\r\n\"bcauth\": true,\r\n\"method\": \"form-data\",\r\n\"data\": {\r\n\"nama_dokter\":\"dr. Bulan Arini, \"\r\n}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api-webservice.teramobile.app/api/v1/passing",
+          "protocol": "https",
+          "host": [
+            "api-webservice",
+            "teramobile",
+            "app"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "passing"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API Revisi Data MCU",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNGFhNmYzOGE2MWIyZDNjOWJiZjM1MDIyMzg3MDgzZmUzYzM1OWJlZTljNTBkYzAxYzE0OGUxNzNlODJiZjZlOTMzZTc4NTRjYzRlZmY5ZjIiLCJpYXQiOjE3NzE1NTEwNjIsIm5iZiI6MTc3MTU1MTA2MiwiZXhwIjoxODAzMDg3MDYyLCJzdWIiOiIxNCIsInNjb3BlcyI6W119.YTF_C707yvVfqwfX1qyDCaFk8dFFJUFDN3VmRZLBwsQjEBBXth0gvCwvKYd9RpN3qmvmh2bNV5r_4Ytlmx1LLQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"requestid\": \"update_mcu\",\r\n    \"bcauth\": true,\r\n    \"method\": \"form-data\",\r\n    \"data\": {\r\n        \"no_konfirmasi\": \"83810\",\r\n        \"title\": \"Tn\",\r\n        \"nama_lengkap\": \"TEST API PESERTA 01\",\r\n        \"jenis_kelamin\": \"f\",\r\n        \"tanggal_lahir\": \"09-10-2000\",\r\n        \"no_telp\": \"088719516261515\",\r\n        \"nik\": \"9871876109810001\",\r\n        \"department\": \"Finance\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api-webservice.teramobile.app/api/v1/passing",
+          "protocol": "https",
+          "host": [
+            "api-webservice",
+            "teramobile",
+            "app"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "passing"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API Get Tindakan Paket",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNGFhNmYzOGE2MWIyZDNjOWJiZjM1MDIyMzg3MDgzZmUzYzM1OWJlZTljNTBkYzAxYzE0OGUxNzNlODJiZjZlOTMzZTc4NTRjYzRlZmY5ZjIiLCJpYXQiOjE3NzE1NTEwNjIsIm5iZiI6MTc3MTU1MTA2MiwiZXhwIjoxODAzMDg3MDYyLCJzdWIiOiIxNCIsInNjb3BlcyI6W119.YTF_C707yvVfqwfX1qyDCaFk8dFFJUFDN3VmRZLBwsQjEBBXth0gvCwvKYd9RpN3qmvmh2bNV5r_4Ytlmx1LLQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"requestid\": \"get_tindakan_paket\",\r\n    \"bcauth\": true,\r\n    \"method\": \"form-data\",\r\n        \"data\": {\r\n        \"id_paket\": \"1656\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api-webservice.teramobile.app/api/v1/passing",
+          "protocol": "https",
+          "host": [
+            "api-webservice",
+            "teramobile",
+            "app"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "passing"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API Upload MCU",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNGFhNmYzOGE2MWIyZDNjOWJiZjM1MDIyMzg3MDgzZmUzYzM1OWJlZTljNTBkYzAxYzE0OGUxNzNlODJiZjZlOTMzZTc4NTRjYzRlZmY5ZjIiLCJpYXQiOjE3NzE1NTEwNjIsIm5iZiI6MTc3MTU1MTA2MiwiZXhwIjoxODAzMDg3MDYyLCJzdWIiOiIxNCIsInNjb3BlcyI6W119.YTF_C707yvVfqwfX1qyDCaFk8dFFJUFDN3VmRZLBwsQjEBBXth0gvCwvKYd9RpN3qmvmh2bNV5r_4Ytlmx1LLQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"requestid\": \"upload_mcu\",\r\n    \"bcauth\": true,\r\n    \"method\": \"form-data\",\r\n    \"data\": {\r\n        \"title\": \"Tn\",\r\n        \"nama_lengkap\": \"TEST API PESERTA 02\",\r\n        \"jenis_kelamin\": \"m\",\r\n        \"tanggal_lahir\": \"29-09-1997\",\r\n        \"no_telp\": \"087898710901\",\r\n        \"nik\": \"8971908198710001\",\r\n        \"department\": \"MARKETING\",\r\n        \"id_paket\": \"1656\",\r\n        \"id_perusahaan\": \"382\",\r\n        \"id_dokter_koordinator\": \"3984\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api-webservice.teramobile.app/api/v1/passing",
+          "protocol": "https",
+          "host": [
+            "api-webservice",
+            "teramobile",
+            "app"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "passing"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API Upload MCU Detail",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNGFhNmYzOGE2MWIyZDNjOWJiZjM1MDIyMzg3MDgzZmUzYzM1OWJlZTljNTBkYzAxYzE0OGUxNzNlODJiZjZlOTMzZTc4NTRjYzRlZmY5ZjIiLCJpYXQiOjE3NzE1NTEwNjIsIm5iZiI6MTc3MTU1MTA2MiwiZXhwIjoxODAzMDg3MDYyLCJzdWIiOiIxNCIsInNjb3BlcyI6W119.YTF_C707yvVfqwfX1qyDCaFk8dFFJUFDN3VmRZLBwsQjEBBXth0gvCwvKYd9RpN3qmvmh2bNV5r_4Ytlmx1LLQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"requestid\": \"upload_mcu_detail\",\r\n    \"bcauth\": true,\r\n    \"method\": \"form-data\",\r\n    \"data\": {\r\n        \"no_konfirmasi\": \"83808\",\r\n        \"id_jenis_dokter\": \"20\",\r\n        \"id_dokter\": \"3880\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api-webservice.teramobile.app/api/v1/passing",
+          "protocol": "https",
+          "host": [
+            "api-webservice",
+            "teramobile",
+            "app"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "passing"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API Delete MCU Detail",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNGFhNmYzOGE2MWIyZDNjOWJiZjM1MDIyMzg3MDgzZmUzYzM1OWJlZTljNTBkYzAxYzE0OGUxNzNlODJiZjZlOTMzZTc4NTRjYzRlZmY5ZjIiLCJpYXQiOjE3NzE1NTEwNjIsIm5iZiI6MTc3MTU1MTA2MiwiZXhwIjoxODAzMDg3MDYyLCJzdWIiOiIxNCIsInNjb3BlcyI6W119.YTF_C707yvVfqwfX1qyDCaFk8dFFJUFDN3VmRZLBwsQjEBBXth0gvCwvKYd9RpN3qmvmh2bNV5r_4Ytlmx1LLQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"requestid\": \"delete_detail_pasien_mcu\",\r\n    \"bcauth\": true,\r\n    \"method\": \"form-data\",\r\n    \"data\": {\r\n        \"no_konfirmasi\": \"83808\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api-webservice.teramobile.app/api/v1/passing",
+          "protocol": "https",
+          "host": [
+            "api-webservice",
+            "teramobile",
+            "app"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "passing"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API Get Hasil Pemeriksaan",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNGFhNmYzOGE2MWIyZDNjOWJiZjM1MDIyMzg3MDgzZmUzYzM1OWJlZTljNTBkYzAxYzE0OGUxNzNlODJiZjZlOTMzZTc4NTRjYzRlZmY5ZjIiLCJpYXQiOjE3NzE1NTEwNjIsIm5iZiI6MTc3MTU1MTA2MiwiZXhwIjoxODAzMDg3MDYyLCJzdWIiOiIxNCIsInNjb3BlcyI6W119.YTF_C707yvVfqwfX1qyDCaFk8dFFJUFDN3VmRZLBwsQjEBBXth0gvCwvKYd9RpN3qmvmh2bNV5r_4Ytlmx1LLQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"requestid\": \"get_hasil_pemeriksaan\",\r\n    \"bcauth\": true,\r\n    \"method\": \"form-data\",\r\n    \"data\": {\r\n        \"no_reg\": \"2602120001 \"\r\n}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api-webservice.teramobile.app/api/v1/passing",
+          "protocol": "https",
+          "host": [
+            "api-webservice",
+            "teramobile",
+            "app"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "passing"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
